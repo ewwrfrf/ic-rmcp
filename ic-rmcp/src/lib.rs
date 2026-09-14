@@ -19,6 +19,10 @@ pub use server::Server;
 
 mod state;
 
+/// Self-service API key lifecycle (create, list, and ownership-checked revoke).
+pub mod api_key;
+pub use api_key::{ApiKeyInfo, ApiKeyMetadata, ApiKeyState, HashedApiKey};
+
 /// OAuth configuration types for protecting your MCP server and advertising metadata.
 pub use handler::oauth::{IssuerConfig, OAuthConfig};
 /// Helper to generate a JSON Schema for a Rust type to describe tool parameters.
